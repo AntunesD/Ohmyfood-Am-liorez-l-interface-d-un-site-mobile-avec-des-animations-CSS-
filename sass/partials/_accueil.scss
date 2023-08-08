@@ -1,0 +1,151 @@
+/******Page d'accueil******/
+
+/***Section Hero***/
+
+.hero-section {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.hero {
+    width: 100%;
+    box-sizing: border-box;
+    background-color: $Background;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px;
+    text-align: center;
+
+    &__titre {
+        margin-bottom: 10px;
+    }
+
+    &__paragraphe {
+        font-weight: 300;
+        margin: 0;
+    }
+}
+
+.fonctionnement {
+    width: 100%;
+    padding: 17px;
+    box-sizing: border-box;
+}
+
+.etape {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 24px 0;
+
+    &__nombre {
+        border-radius: 50%;
+        background-color: $Primary;
+        color: white;
+        width: 24px;
+        height: 24px;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        left: 12px;
+    }
+
+    &__contenue {
+        box-sizing: border-box;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        background-color: $Background;
+        border-radius: 20px;
+        font-size: 16px;
+        height: 72px;
+        box-shadow: $Instruction-shadow;
+
+        &__instruction {
+            font-size: 16px;
+        }
+
+        & i {
+            font-size: 20px;
+            color: $Grey-Tint4;
+        }
+
+        &--irose i {
+            color: $Primary;
+        }
+    }
+}
+
+
+/***Section restaurants***/
+
+.restaurants-section {
+    background-color: $Background;
+    padding: 17px;
+}
+
+.carte {
+    box-sizing: border-box;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    margin: 18px 0px;
+    box-shadow: $Card-shadow;
+    position: relative;
+
+    &__global {
+        width: 100%;
+    }
+
+    &--nouveau {
+        background-color: $Green;
+        color: $Green-Font;
+        padding: 6px 9px;
+        display: flex;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+    }
+
+    &__img {
+        height: 174px;
+        width: 100%;
+        object-fit: cover;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+
+    }
+
+    &__contenue {
+        padding: 13px;
+
+        &__titre {
+            font-size: 18px;
+            margin: 2px 0;
+        }
+
+        &__lieu {
+            font-size: 17px;
+            font-weight: lighter;
+            margin: 0;
+        }
+    }
+
+    &__coeurs {
+        font-size: 21px;
+        position: absolute;
+        bottom: 33px;
+        right: 25px;
+    }
+
+}

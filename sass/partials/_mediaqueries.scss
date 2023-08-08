@@ -7,7 +7,7 @@
         padding: 0;
     }
 
-    h1 {
+    .hero__titre {
         font-size: 40px;
     }
 
@@ -16,9 +16,10 @@
             font-size: 18px;
         }
 
-        &__CTA {
-            margin-bottom: 0;
-        }
+    }
+
+    .CTA {
+        margin-bottom: 0;
     }
 
     .etape {

@@ -21,18 +21,18 @@
         <div class="header__logo">
             <img src="./assets/images/logo/ohmyfood@2x.svg" alt="Logo du site">
         </div>
-        <form class="form">
+        <form class="header__form">
             <label for="inputGeo" class="fa-solid fa-location-dot"></label>
-            <input id="inputGeo" class="form__input" type="text" placeholder="Paris, Belleville" readonly>
+            <input id="inputGeo" class="header__form__input" type="text" placeholder="Paris, Belleville" readonly>
         </form>
     </header>
 
     <section class="hero-section">
 
         <div class="hero">
-            <h1>Réservez le menu qui vous convient</h1>
+            <h1 class="hero__titre" >Réservez le menu qui vous convient</h1>
             <p class="hero__paragraphe">Découvrez des restaurants d'exception, selectionnés par nos soins.</p>
-            <a href="#cartesDesRestaurants" class="hero__CTA">Explorer nos restaurants</a>
+            <a href="#cartesDesRestaurants" class="CTA">Explorer nos restaurants</a>
         </div>
 
         <div class="fonctionnement">
@@ -73,7 +73,7 @@
         <div id="cartesDesRestaurants">
 
             <article class="carte">
-                <a id="laPaletteDuGout" href="#">
+                <a class="carte__global" id="laPaletteDuGout" href="./restaurants/la-palette-du-gout.html">
                     <img class="carte__img" src="./assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
                         alt="Image montrant une assieste sur la table d'un restaurant">
                     <div class="carte--nouveau">Nouveau</div>
@@ -83,16 +83,16 @@
                     </div>
                 </a>
 
-                <input type="checkbox" class="carte__jaime" id="jaime">
+                <input type="checkbox" class="jaime" id="jaime">
                 <label class="label" for="jaime">
-                    <span class="carte__jaime__coeur"><i class="fa-regular fa-heart"></i></span>
-                    <span class="carte__jaime__coeur-rose"><i class="fa-solid fa-heart"></i></span>
+                    <span class="carte__coeurs  jaime__coeur"><i class="fa-regular fa-heart"></i></span>
+                    <span class="carte__coeurs  jaime__coeur-rose"><i class="fa-solid fa-heart"></i></span>
                 </label>
 
             </article>
 
             <article class="carte">
-            <a id="LaNoteEnchantee" href="#">
+            <a class="carte__global" id="LaNoteEnchantee" href="./restaurants/la-note-enchantée.html">
                     <img class="carte__img" src="./assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg"
                         alt="Image montrant une assieste sur la table d'un restaurant">
                     <div class="carte--nouveau">Nouveau</div>
@@ -102,16 +102,16 @@
                     </div>
                 </a>
 
-                <input type="checkbox" class="carte__jaime" id="jaime2">
+                <input type="checkbox" class="jaime" id="jaime2">
                 <label class="label" for="jaime2">
-                    <span class="carte__jaime__coeur"><i class="fa-regular fa-heart"></i></span>
-                    <span class="carte__jaime__coeur-rose"><i class="fa-solid fa-heart"></i></span>
+                    <span class="carte__coeurs  jaime__coeur"><i class="fa-regular fa-heart"></i></span>
+                    <span class="carte__coeurs  jaime__coeur-rose"><i class="fa-solid fa-heart"></i></span>
                 </label>
 
             </article>
 
             <article class="carte">
-            <a id="aLaFrancaise" href="#">
+            <a class="carte__global" id="aLaFrancaise" href="./restaurants/a-la-francaise.html">
                     <img class="carte__img" src="./assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
                         alt="Image montrant une assieste sur la table d'un restaurant">
                     <div class="carte__contenue">
@@ -120,16 +120,16 @@
                     </div>
                 </a>
 
-                <input type="checkbox" class="carte__jaime" id="jaime3">
+                <input type="checkbox" class="jaime" id="jaime3">
                 <label class="label" for="jaime3">
-                    <span class="carte__jaime__coeur"><i class="fa-regular fa-heart"></i></span>
-                    <span class="carte__jaime__coeur-rose"><i class="fa-solid fa-heart"></i></span>  
+                    <span class="carte__coeurs  jaime__coeur"><i class="fa-regular fa-heart"></i></span>
+                    <span class="carte__coeurs  jaime__coeur-rose"><i class="fa-solid fa-heart"></i></span>
                 </label>
 
             </article>
 
             <article class="carte">
-            <a id="leDeliceDesSens" href="#">
+            <a class="carte__global" id="leDeliceDesSens" href="./restaurants/le-delice-des-sens.html">
                     <img class="carte__img"
                         src="./assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
                         alt="Image montrant une assieste sur la table d'un restaurant">
@@ -139,10 +139,10 @@
                     </div>
                 </a>
 
-                <input type="checkbox" class="carte__jaime" id="jaime4">
+                <input type="checkbox" class="jaime" id="jaime4">
                 <label class="label" for="jaime4">
-                    <span class="carte__jaime__coeur"><i class="fa-regular fa-heart"></i></span>
-                    <span class="carte__jaime__coeur-rose"><i class="fa-solid fa-heart"></i></span>
+                    <span class="carte__coeurs  jaime__coeur"><i class="fa-regular fa-heart"></i></span>
+                    <span class="carte__coeurs  jaime__coeur-rose"><i class="fa-solid fa-heart"></i></span>
                 </label>
 
             </article>

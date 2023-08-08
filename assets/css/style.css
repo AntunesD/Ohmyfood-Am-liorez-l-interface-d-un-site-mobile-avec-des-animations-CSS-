@@ -1,22 +1,138 @@
 @charset "UTF-8";
-/***Variables***/
+/***Importation***/
 /***Couleur***/
 /***Ombres***/
-/***Générale***/
-* {
-  font-family: "Roboto", sans-serif;
+/***Fonction j'aime***/
+.jaime {
+  display: none;
+}
+.jaime__coeur {
+  opacity: 1;
+  transition: opacity 400ms;
+}
+.jaime__coeur-rose {
+  opacity: 0;
+  background: linear-gradient(187deg, rgb(147, 86, 220) 10%, rgb(255, 121, 218) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  transition: opacity 400ms;
+}
+.jaime:checked ~ .label .jaime__coeur {
+  opacity: 0;
+}
+.jaime:checked ~ .label .jaime__coeur-rose {
+  opacity: 1;
 }
 
-a {
-  text-decoration: none;
+/***CTA***/
+.CTA {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(355deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
+  color: white;
+  width: 218px;
+  height: 50px;
+  border-radius: 25px;
+  font-size: 16px;
+  border: none;
+  margin: 27px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  position: relative;
+  z-index: 1;
+}
+.CTA:hover::after {
+  opacity: 0.15;
+}
+.CTA::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 25px;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 300ms ease-out;
 }
 
-body {
-  margin: 0;
+/******Page des menus******/
+.titre__page {
+  font-size: 28px;
+  margin-top: 32px;
+  margin-left: 4px;
+  margin-bottom: -10px;
+  font-family: "Shrikhand", cursive;
+}
+.titre__page__coeurs {
+  position: absolute;
+  top: 32px;
+  right: 41px;
+  font-size: 28px;
 }
 
-h1 {
-  margin-bottom: 10px;
+.menu {
+  max-width: 100%;
+  background-color: #F6F6F6;
+  padding: 1px 13px;
+  border-top-left-radius: 32px;
+  border-top-right-radius: 32px;
+  position: relative;
+  top: -32px;
+}
+.menu__titre {
+  font-size: 16px;
+  font-weight: 300;
+  margin-top: 40px;
+  margin-bottom: 18px;
+}
+.menu__titre span {
+  padding-bottom: 4px;
+  border-bottom: 2px solid #99E2D0;
+}
+.menu__elements {
+  display: flex;
+  justify-content: space-between;
+  height: 69px;
+  border-radius: 15px;
+  background-color: white;
+  margin-top: 12px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 14px 15px;
+  box-sizing: border-box;
+}
+.menu__elements h3, .menu__elements p {
+  margin: 0px 0;
+}
+.menu__elements h3 {
+  font-size: 1.125em;
+}
+.menu__elements p {
+  font-weight: lighter;
+  font-size: 0.94em;
+}
+.menu__elements__produit {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.menu__elements__prix {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: end;
+  padding: 3px;
+  font-weight: bold;
+}
+
+.cta__centrer {
+  display: flex;
+  justify-content: center;
+  margin-top: -9px;
+  margin-bottom: 13px;
 }
 
 /***Header***/
@@ -27,6 +143,14 @@ h1 {
   justify-content: center;
   flex-direction: column;
 }
+.header__retour {
+  z-index: 2;
+  position: absolute;
+  top: 17px;
+  left: 17px;
+  font-size: 20px;
+  font-weight: bolder;
+}
 .header__logo {
   display: flex;
   justify-content: center;
@@ -35,25 +159,57 @@ h1 {
   z-index: 1;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
 }
-
-.form {
+.header__img {
+  height: 275px;
+  object-fit: cover;
+  width: 100%;
+}
+.header__form {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: #EAEAEA;
 }
-.form__input {
+.header__form__input {
   border: none;
   background-color: #EAEAEA;
   font-size: 16px;
   margin: 16px 0;
   text-align: center;
 }
-.form__input::placeholder {
+.header__form__input::placeholder {
   color: black;
 }
 
+/***Footer***/
+.footer {
+  width: 100%;
+  background-color: black;
+  color: white;
+  padding: 8px 25px;
+  box-sizing: border-box;
+}
+.footer__div {
+  display: flex;
+  flex-direction: column;
+}
+.footer__titre {
+  font-family: "Shrikhand", cursive;
+  font-size: 18px;
+  font-weight: 100;
+}
+.footer__lien {
+  color: white;
+  margin-bottom: 7px;
+  font-size: 16px;
+  font-weight: 300;
+}
+.footer__lien i {
+  margin-right: 11px;
+}
+
+/******Page d'accueil******/
 /***Section Hero***/
 .hero-section {
   display: flex;
@@ -71,42 +227,12 @@ h1 {
   padding: 30px;
   text-align: center;
 }
+.hero__titre {
+  margin-bottom: 10px;
+}
 .hero__paragraphe {
   font-weight: 300;
   margin: 0;
-}
-.hero__CTA {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: linear-gradient(355deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
-  color: white;
-  width: 218px;
-  height: 50px;
-  border-radius: 25px;
-  font-size: 16px;
-  border: none;
-  margin: 27px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-  position: relative;
-  z-index: 1;
-}
-.hero__CTA:hover::after {
-  opacity: 0.15;
-}
-.hero__CTA::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  border-radius: 25px;
-  background-color: #ffffff;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-  opacity: 0;
-  z-index: -1;
-  transition: opacity 300ms ease-out;
 }
 
 .fonctionnement {
@@ -177,7 +303,7 @@ h1 {
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
   position: relative;
 }
-.carte a {
+.carte__global {
   width: 100%;
 }
 .carte--nouveau {
@@ -197,9 +323,6 @@ h1 {
   border-top-right-radius: 15px;
 }
 .carte__contenue {
-  width: 100%;
-  box-sizing: border-box;
-  color: black;
   padding: 13px;
 }
 .carte__contenue__titre {
@@ -211,62 +334,31 @@ h1 {
   font-weight: lighter;
   margin: 0;
 }
-.carte i {
+.carte__coeurs {
   font-size: 21px;
-}
-.carte__jaime {
-  display: none;
-}
-.carte__jaime__coeur {
-  opacity: 1;
   position: absolute;
-  transition: opacity 400ms;
   bottom: 33px;
   right: 25px;
-}
-.carte__jaime__coeur-rose {
-  opacity: 0;
-  background: linear-gradient(187deg, rgb(147, 86, 220) 10%, rgb(255, 121, 218) 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  position: absolute;
-  transition: opacity 400ms;
-  bottom: 33px;
-  right: 25px;
-}
-.carte__jaime:checked ~ .label .carte__jaime__coeur {
-  opacity: 0;
-}
-.carte__jaime:checked ~ .label .carte__jaime__coeur-rose {
-  opacity: 1;
 }
 
-/***Footer***/
-.footer {
-  width: 100%;
-  background-color: black;
-  color: white;
-  padding: 8px 25px;
-  box-sizing: border-box;
+/***Générale***/
+* {
+  font-family: "Roboto", sans-serif;
 }
-.footer__div {
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+body {
+  margin: 0;
+}
+
+main {
+  background-color: #F6F6F6;
   display: flex;
   flex-direction: column;
-}
-.footer__titre {
-  font-family: "Shrikhand", cursive;
-  font-size: 18px;
-  font-weight: 100;
-}
-.footer__lien {
-  color: white;
-  margin-bottom: 7px;
-  font-size: 16px;
-  font-weight: 300;
-}
-.footer__lien i {
-  margin-right: 11px;
 }
 
 /***Media queries***/
@@ -276,13 +368,13 @@ h1 {
     height: 96px;
     padding: 0;
   }
-  h1 {
+  .hero__titre {
     font-size: 40px;
   }
   .hero__paragraphe {
     font-size: 18px;
   }
-  .hero__CTA {
+  .CTA {
     margin-bottom: 0;
   }
   .etape {

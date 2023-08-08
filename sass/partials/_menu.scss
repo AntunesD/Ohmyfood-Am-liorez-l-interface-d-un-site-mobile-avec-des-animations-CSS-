@@ -1,0 +1,87 @@
+/******Page des menus******/
+
+.titre__page {
+    font-size: 28px;
+    margin-top: 32px;
+    margin-left: 4px;
+    margin-bottom: -10px;
+    font-family: 'Shrikhand', cursive;
+
+    &__coeurs {
+        position: absolute;
+        top: 32px;
+        right: 41px;
+        font-size: 28px;
+    }
+}
+
+.menu {
+    max-width: 100%;
+    background-color: $Background;
+    padding: 1px 13px;
+    border-top-left-radius: 32px;
+    border-top-right-radius: 32px;
+    position: relative;
+    top: -32px;
+
+    &__titre {
+        font-size: 16px;
+        font-weight: 300;
+        margin-top: 40px;
+        margin-bottom: 18px;
+
+        & span {
+            padding-bottom: 4px;
+            border-bottom: 2px solid $Green;
+        }
+    }
+
+
+    &__elements {
+        display: flex;
+        justify-content: space-between;
+        height: 69px;
+        border-radius: 15px;
+        background-color: white;
+        margin-top: 12px;
+        box-shadow: $Card-shadow;
+        padding: 14px 15px;
+        box-sizing: border-box;
+
+        & h3,
+        & p {
+            margin: 0px 0;
+        }
+
+        & h3 {
+            font-size: 1.125em;
+        }
+
+        & p {
+            font-weight: lighter;
+            font-size: 0.94em;
+        }
+
+        &__produit {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        &__prix {
+            display: flex;
+            flex-wrap: wrap;
+            align-content: end;
+            padding: 3px;
+            font-weight: bold;
+        }
+    }
+}
+
+
+.cta__centrer {
+    display: flex;
+    justify-content: center;
+    margin-top: -9px;
+    margin-bottom: 13px;
+}

@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/***Importation***/
+/***Variables***/
 /***Couleur***/
 /***Ombres***/
 /***Générale***/
@@ -13,6 +13,10 @@ a {
 
 body {
   margin: 0;
+}
+
+h1 {
+  margin-bottom: 10px;
 }
 
 /***Header***/
@@ -141,7 +145,6 @@ body {
   background-color: #F6F6F6;
   border-radius: 20px;
   font-size: 16px;
-  padding: 0 25px;
   height: 72px;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
 }
@@ -260,10 +263,72 @@ body {
   color: white;
   margin-bottom: 7px;
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 300;
 }
 .footer__lien i {
   margin-right: 11px;
+}
+
+/***Media queries***/
+/*** Media queries ***/
+@media (min-width: 768px) {
+  .header__logo {
+    height: 96px;
+    padding: 0;
+  }
+  h1 {
+    font-size: 40px;
+  }
+  .hero__paragraphe {
+    font-size: 18px;
+  }
+  .hero__CTA {
+    margin-bottom: 0;
+  }
+  .etape {
+    width: 33%;
+  }
+  .etape--media {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #cartesDesRestaurants {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .carte {
+    width: 45.37%;
+    margin-top: 28px;
+    margin-bottom: 22px;
+  }
+  .footer {
+    height: 114px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: end;
+  }
+  .footer__div {
+    display: flex;
+    flex-direction: row;
+  }
+  .footer__titre {
+    margin-bottom: 26px;
+  }
+  .footer__lien {
+    margin: 30px 10px;
+  }
+}
+@media (min-width: 1024px) {
+  .restaurants-section {
+    display: flex;
+    justify-content: center;
+  }
+  .restaurant--media,
+  .fonctionnement {
+    max-width: 1024px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

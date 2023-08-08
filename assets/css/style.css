@@ -84,6 +84,25 @@ body {
   border: none;
   margin: 27px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  position: relative;
+  z-index: 1;
+}
+.hero__CTA:hover::after {
+  opacity: 0.15;
+}
+.hero__CTA::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 25px;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 300ms ease-out;
 }
 
 .fonctionnement {
@@ -133,6 +152,9 @@ body {
   font-size: 20px;
   color: #7E7E7E;
 }
+.etape__contenue--irose i {
+  color: #9356DC;
+}
 
 /***Section restaurants***/
 .restaurants-section {
@@ -152,6 +174,9 @@ body {
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
   position: relative;
 }
+.carte a {
+  width: 100%;
+}
 .carte--nouveau {
   background-color: #99E2D0;
   color: #008766;
@@ -170,11 +195,7 @@ body {
 }
 .carte__contenue {
   width: 100%;
-  display: flex;
   box-sizing: border-box;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
   color: black;
   padding: 13px;
 }
@@ -187,8 +208,35 @@ body {
   font-weight: lighter;
   margin: 0;
 }
-.carte__contenue i {
+.carte i {
   font-size: 21px;
+}
+.carte__jaime {
+  display: none;
+}
+.carte__jaime__coeur {
+  opacity: 1;
+  position: absolute;
+  transition: opacity 400ms;
+  bottom: 33px;
+  right: 25px;
+}
+.carte__jaime__coeur-rose {
+  opacity: 0;
+  background: linear-gradient(187deg, rgb(147, 86, 220) 10%, rgb(255, 121, 218) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  position: absolute;
+  transition: opacity 400ms;
+  bottom: 33px;
+  right: 25px;
+}
+.carte__jaime:checked ~ .label .carte__jaime__coeur {
+  opacity: 0;
+}
+.carte__jaime:checked ~ .label .carte__jaime__coeur-rose {
+  opacity: 1;
 }
 
 /***Footer***/

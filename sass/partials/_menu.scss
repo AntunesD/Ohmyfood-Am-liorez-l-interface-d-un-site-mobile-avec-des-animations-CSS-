@@ -1,22 +1,8 @@
 /******Page des menus******/
 
-.titre__page {
-    font-size: 28px;
-    margin-top: 32px;
-    margin-left: 4px;
-    margin-bottom: -10px;
-    font-family: 'Shrikhand', cursive;
-
-    &__coeurs {
-        position: absolute;
-        top: 32px;
-        right: 41px;
-        font-size: 28px;
-    }
-}
-
 .menu {
     max-width: 100%;
+    width: 100%;
     background-color: $Background;
     padding: 1px 13px;
     border-top-left-radius: 32px;
@@ -24,7 +10,22 @@
     position: relative;
     top: -32px;
 
-    &__titre {
+    &__coeurs {
+        position: absolute;
+        top: 32px;
+        right: 35px;
+        font-size: 28px;
+    }
+
+    & h1 {
+        font-size: 28px;
+        margin-top: 32px;
+        margin-left: 4px;
+        margin-bottom: -10px;
+        font-family: 'Shrikhand', cursive;
+    }
+
+    & h2 {
         font-size: 16px;
         font-weight: 300;
         margin-top: 40px;
@@ -37,7 +38,7 @@
     }
 
 
-    &__elements {
+    & li {
         display: flex;
         justify-content: space-between;
         height: 69px;
@@ -48,32 +49,23 @@
         padding: 14px 15px;
         box-sizing: border-box;
 
-        & h3,
-        & p {
-            margin: 0px 0;
-        }
-
         & h3 {
             font-size: 1.125em;
-        }
-
-        & p {
-            font-weight: lighter;
-            font-size: 0.94em;
-        }
-
-        &__produit {
             display: flex;
             flex-direction: column;
             justify-content: center;
+
+            & span {
+                font-weight: 100;
+                font-size: 0.94em;
+            }
         }
 
-        &__prix {
+        & b {
             display: flex;
             flex-wrap: wrap;
             align-content: end;
             padding: 3px;
-            font-weight: bold;
         }
     }
 }
@@ -82,6 +74,7 @@
 .cta__centrer {
     display: flex;
     justify-content: center;
-    margin-top: -9px;
-    margin-bottom: 13px;
+    position: relative;
+    margin-top: -32px;
+    bottom: -25px;
 }

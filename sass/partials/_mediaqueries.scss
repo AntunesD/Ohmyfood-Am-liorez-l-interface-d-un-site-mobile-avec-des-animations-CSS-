@@ -7,7 +7,7 @@
         padding: 0;
     }
 
-    .hero__titre {
+    h1 {
         font-size: 40px;
     }
 
@@ -23,12 +23,15 @@
     }
 
     .etape {
-        width: 33%;
 
-        &--media {
+        & ul {
             display: flex;
             justify-content: space-between;
             align-items: center;
+        }
+
+        & li {
+            width: 33%;
         }
     }
 
@@ -44,38 +47,37 @@
         margin-bottom: 22px;
     }
 
-    .footer {
+    footer {
         height: 114px;
         display: flex;
         flex-direction: row-reverse;
         align-items: end;
 
-        &__div {
+        & ul {
             display: flex;
             flex-direction: row;
+            margin-bottom: 30px;
         }
 
-        &__titre {
+        & h2 {
             margin-bottom: 26px;
         }
 
-        &__lien {
-            margin: 30px 10px;
+        & a {
+            margin: 0 10px;
         }
     }
 }
 
 @media (min-width: 1024px) {
 
-    .restaurants-section {
+    .etape {
         display: flex;
         justify-content: center;
     }
 
-    .restaurant--media,
-    .fonctionnement {
+    .restaurants, .etape--media {
+        width: 100%;
         max-width: 1024px;
     }
-
-
 }

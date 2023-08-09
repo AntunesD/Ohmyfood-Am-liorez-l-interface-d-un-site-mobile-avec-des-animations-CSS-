@@ -1,48 +1,57 @@
 /******Page d'accueil******/
 
-/***Section Hero***/
-
-.hero-section {
+form {
+    width: 100%;
     display: flex;
     align-items: center;
-    flex-direction: column;
+    justify-content: center;
+    background-color: $Grey-second;
+
+    & input {
+        border: none;
+        background-color: $Grey-second;
+        font-size: 16px;
+        margin: 16px 0;
+        text-align: center;
+
+        &::placeholder {
+            color: black;
+        }
+    }
 }
 
-.hero {
-    width: 100%;
-    box-sizing: border-box;
-    background-color: $Background;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    padding: 30px;
-    text-align: center;
 
-    &__titre {
+/***Section Hero***/
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-left: 25px;
+    padding-right: 25px;
+
+    & h1 {
         margin-bottom: 10px;
     }
 
-    &__paragraphe {
+    & p {
         font-weight: 300;
         margin: 0;
     }
 }
 
-.fonctionnement {
-    width: 100%;
-    padding: 17px;
-    box-sizing: border-box;
-}
-
 .etape {
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    margin: 24px 0;
 
-    &__nombre {
+    background-color: white;
+
+    & li {
+        display: flex;
+        align-items: center;
+        margin: 24px 0;
+    }
+
+    & p {
         border-radius: 50%;
         background-color: $Primary;
         color: white;
@@ -56,7 +65,7 @@
         left: 12px;
     }
 
-    &__contenue {
+    & h3 {
         box-sizing: border-box;
         width: 100%;
         display: flex;
@@ -67,43 +76,32 @@
         font-size: 16px;
         height: 72px;
         box-shadow: $Instruction-shadow;
+        margin: 0;
+    }
 
-        &__instruction {
-            font-size: 16px;
-        }
+    & i {
+        font-size: 20px;
+        color: $Grey-Tint4;
+    }
 
-        & i {
-            font-size: 20px;
-            color: $Grey-Tint4;
-        }
-
-        &--irose i {
-            color: $Primary;
-        }
+    & .--irose {
+        color: $Primary;
     }
 }
 
 
 /***Section restaurants***/
 
-.restaurants-section {
-    background-color: $Background;
-    padding: 17px;
-}
-
 .carte {
-    box-sizing: border-box;
     border-radius: 15px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
     background-color: white;
     margin: 18px 0px;
     box-shadow: $Card-shadow;
     position: relative;
 
-    &__global {
+    & a {
         width: 100%;
     }
 
@@ -117,7 +115,7 @@
         right: 15px;
     }
 
-    &__img {
+    & img {
         height: 174px;
         width: 100%;
         object-fit: cover;
@@ -126,25 +124,25 @@
 
     }
 
-    &__contenue {
+    & h3 {
+        display: flex;
+        flex-direction: column;
         padding: 13px;
+        font-size: 18px;
+        margin: 0;
+        line-height: 1;
+    }
 
-        &__titre {
-            font-size: 18px;
-            margin: 2px 0;
-        }
-
-        &__lieu {
-            font-size: 17px;
-            font-weight: lighter;
-            margin: 0;
-        }
+    & span {
+        margin-top: 8px;
+        font-size: 17px;
+        font-weight: 100;
     }
 
     &__coeurs {
         font-size: 21px;
         position: absolute;
-        bottom: 33px;
+        bottom: 30px;
         right: 25px;
     }
 

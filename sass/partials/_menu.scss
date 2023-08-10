@@ -9,6 +9,7 @@
     border-top-right-radius: 32px;
     position: relative;
     top: -32px;
+    overflow: hidden;
 
     &__coeurs {
         position: absolute;
@@ -51,9 +52,11 @@
 
         & h3 {
             font-size: 1.125em;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
+            margin: 0;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            flex: 1;
 
             & span {
                 font-weight: 100;

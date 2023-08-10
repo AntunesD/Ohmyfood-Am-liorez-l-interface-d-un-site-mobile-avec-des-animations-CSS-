@@ -17,6 +17,11 @@ a {
     color: black;
 }
 
+html {
+    scroll-behavior: smooth;
+  }
+  
+
 body {
     margin: 0;
 }
@@ -31,14 +36,15 @@ main {
 section {
     padding: 17px;
     width: 100%;
-    box-sizing: border-box;
-
+    box-sizing: border-box; 
 }
 
 ul {
     padding: 0;
 }
 
-/***Media queries***/
+/***Media queries et animation***/
 
 @import "./partials/mediaqueries";
+
+@import "./partials/animations";

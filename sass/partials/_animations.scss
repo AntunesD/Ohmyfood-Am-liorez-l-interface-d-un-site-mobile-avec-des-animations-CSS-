@@ -1,0 +1,172 @@
+/******Animations******/
+
+/***Loader***/
+
+.acceuil {
+  opacity: 0;
+  animation: fadeIn 5s 2s ease forwards;
+
+}
+
+.loader {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  -webkit-perspective: 700px;
+  perspective: 700px;
+  position: absolute;
+  top: 50%;
+  opacity: 1;
+  animation: fadeOut 5s ease forwards;
+}
+
+
+
+.loader.hidden {
+  opacity: 0;
+}
+
+.loader>span {
+  font-size: 70px;
+  display: inline-block;
+  animation: flip 2.6s 2 linear;
+  transform-origin: 0 70%;
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  font-family: 'Shrikhand', cursive;
+}
+
+
+
+.loader>span:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+.loader>span:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.loader>span:nth-child(4) {
+  animation-delay: 0.9s;
+}
+
+.loader>span:nth-child(5) {
+  animation-delay: 1.2s;
+}
+
+.loader>span:nth-child(6) {
+  animation-delay: 1.5s
+}
+
+.loader>span:nth-child(7) {
+  animation-delay: 1.8s
+}
+
+.loader>span:nth-child(8) {
+  animation-delay: 2.1s
+}
+
+
+/***Keyframes loader***/
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    display: none;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+
+@keyframes flip {
+  35% {
+    transform: rotateX(360deg);
+  }
+
+  100% {
+    transform: rotatex(360deg);
+  }
+}
+
+/******Page Menu******/
+
+/***arrivé des produits***/
+
+.menu {
+
+  & li {
+    position: relative;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: transform 10s ease-in-out, opacity 10s ease-in-out;
+  }
+
+  & li:nth-child(1) {
+    animation: showRectangles 2s 0s forwards;
+  }
+
+  & li:nth-child(2) {
+    animation: showRectangles 2s 0.2s forwards;
+  }
+
+  & li:nth-child(3) {
+    animation: showRectangles 2s 0.3s forwards;
+  }
+
+  & li:nth-child(4) {
+    animation: showRectangles 2s 0.6s forwards;
+  }
+
+  & li:nth-child(5) {
+    animation: showRectangles 2s 0.8s forwards;
+  }
+}
+
+
+/***Keyframes Arriver des produits***/
+
+@keyframes showRectangles {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+/***Prix checked***/
+
+.check {
+  background-color: $Green;
+  height: 69px;
+  margin: -14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 20px;
+  position: relative;
+  right: -22px;
+  transition: all 0.7s ease-in-out;
+}
+
+.menu {
+  & li:hover {
+    & .check {
+      flex: 0.25;
+    }
+  }
+}

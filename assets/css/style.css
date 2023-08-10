@@ -69,7 +69,6 @@
   border-top-left-radius: 32px;
   border-top-right-radius: 32px;
   position: relative;
-  top: -32px;
   overflow: hidden;
 }
 .menu__coeurs {
@@ -79,6 +78,7 @@
   font-size: 28px;
 }
 .menu h1 {
+  max-width: 80%;
   font-size: 28px;
   margin-top: 32px;
   margin-left: 4px;
@@ -97,7 +97,6 @@
 }
 .menu li {
   display: flex;
-  justify-content: space-between;
   height: 69px;
   border-radius: 15px;
   background-color: white;
@@ -105,6 +104,7 @@
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
   padding: 14px 15px;
   box-sizing: border-box;
+  position: relative;
 }
 .menu li h3 {
   font-size: 1.125em;
@@ -112,7 +112,6 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  flex: 1;
 }
 .menu li h3 span {
   font-weight: 100;
@@ -122,15 +121,18 @@
   display: flex;
   flex-wrap: wrap;
   align-content: end;
-  padding: 3px;
+  margin-right: 16px;
+  margin-left: auto;
 }
 
 .cta__centrer {
   display: flex;
   justify-content: center;
   position: relative;
-  margin-top: -32px;
-  bottom: -25px;
+  height: 100%;
+}
+.cta__centrer .CTA {
+  margin-bottom: 40px;
 }
 
 /***Header***/
@@ -144,6 +146,12 @@ header {
   padding: 14px 0;
 }
 
+.header__menu {
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  background-color: white;
+}
 .header__retour {
   z-index: 2;
   position: absolute;
@@ -153,9 +161,11 @@ header {
   font-weight: bolder;
 }
 .header__img {
-  height: 275px;
+  height: 338px;
   object-fit: cover;
   width: 100%;
+  position: relative;
+  top: 32px;
 }
 
 /***Footer***/
@@ -262,7 +272,7 @@ form input::placeholder {
   font-size: 20px;
   color: #7E7E7E;
 }
-.etape .--irose {
+.etape .irose {
   color: #9356DC;
 }
 
@@ -359,10 +369,10 @@ ul {
   h1 {
     font-size: 40px;
   }
-  .hero__paragraphe {
+  .hero p {
     font-size: 18px;
   }
-  .CTA {
+  .hero .CTA {
     margin-bottom: 0;
   }
   .etape ul {
@@ -400,13 +410,28 @@ ul {
   footer a {
     margin: 0 10px;
   }
+  .menu {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .menu h1 {
+    text-align: center;
+  }
+  .menu ul {
+    width: 100%;
+    max-width: 634px;
+  }
+  .main-menus {
+    background-color: white;
+  }
 }
 @media (min-width: 1024px) {
   .etape {
     display: flex;
     justify-content: center;
   }
-  .restaurants, .etape--media {
+  .restaurants, .etape--media, .menu {
     width: 100%;
     max-width: 1024px;
   }
@@ -424,7 +449,7 @@ ul {
   width: 100%;
   -webkit-perspective: 700px;
   perspective: 700px;
-  position: absolute;
+  position: sticky;
   top: 50%;
   opacity: 1;
   animation: fadeOut 5s ease forwards;
@@ -435,7 +460,7 @@ ul {
 }
 
 .loader > span {
-  font-size: 70px;
+  font-size: 12vw;
   display: inline-block;
   animation: flip 2.6s 2 linear;
   transform-origin: 0 70%;
@@ -534,19 +559,23 @@ ul {
 .check {
   background-color: #99E2D0;
   height: 69px;
-  margin: -14px;
+  width: 0px;
+  margin: -14px 0;
+  margin-right: -14px;
   display: flex;
   justify-content: center;
   align-items: center;
   color: white;
   font-size: 20px;
+  overflow: hidden;
   position: relative;
-  right: -22px;
+  right: 0;
   transition: all 0.7s ease-in-out;
 }
 
 .menu li:hover .check {
-  flex: 0.25;
+  /* flex: 0.25;*/
+  width: 69px;
 }
 
 /*# sourceMappingURL=style.css.map */

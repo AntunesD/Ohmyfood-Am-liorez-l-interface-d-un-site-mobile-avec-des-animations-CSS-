@@ -12,14 +12,13 @@
     }
 
     .hero {
-        &__paragraphe {
+        & p {
             font-size: 18px;
         }
-
-    }
-
-    .CTA {
-        margin-bottom: 0;
+        
+        .CTA {
+            margin-bottom: 0;
+        }
     }
 
     .etape {
@@ -67,7 +66,25 @@
             margin: 0 10px;
         }
     }
+    .menu {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        & h1 {
+            text-align: center;
+        }
+        & ul {
+            width: 100%;
+            max-width: 634px;
+        }
+    }
+    .main-menus { 
+        background-color: white;
+    }
 }
+
+
+
 
 @media (min-width: 1024px) {
 
@@ -76,7 +93,7 @@
         justify-content: center;
     }
 
-    .restaurants, .etape--media {
+    .restaurants, .etape--media, .menu {
         width: 100%;
         max-width: 1024px;
     }

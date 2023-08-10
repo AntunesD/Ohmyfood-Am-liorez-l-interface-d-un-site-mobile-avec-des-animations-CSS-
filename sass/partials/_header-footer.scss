@@ -10,8 +10,14 @@ header {
     padding: 14px 0;
 }
 
-
 .header {
+
+    &__menu {
+        position: absolute;
+        top: 0;
+        z-index: 1;
+        background-color: white;
+    }
 
     &__retour {
         z-index: 2;
@@ -23,9 +29,11 @@ header {
     }
 
     &__img {
-        height: 275px;
+        height: 338px;
         object-fit: cover;
         width: 100%;
+        position: relative;
+        top: 32px;
     }
 
 }

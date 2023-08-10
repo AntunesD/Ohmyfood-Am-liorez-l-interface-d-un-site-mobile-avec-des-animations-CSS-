@@ -14,7 +14,7 @@
   width: 100%;
   -webkit-perspective: 700px;
   perspective: 700px;
-  position: absolute;
+  position: sticky;
   top: 50%;
   opacity: 1;
   animation: fadeOut 5s ease forwards;
@@ -27,7 +27,7 @@
 }
 
 .loader>span {
-  font-size: 70px;
+  font-size: 12vw;
   display: inline-block;
   animation: flip 2.6s 2 linear;
   transform-origin: 0 70%;
@@ -152,21 +152,25 @@
 .check {
   background-color: $Green;
   height: 69px;
-  margin: -14px;
+  width: 0px;
+  margin: -14px 0;
+  margin-right: -14px;
   display: flex;
   justify-content: center;
   align-items: center;
   color: white;
   font-size: 20px;
+  overflow: hidden;
   position: relative;
-  right: -22px;
+  right: 0;
   transition: all 0.7s ease-in-out;
 }
 
 .menu {
   & li:hover {
     & .check {
-      flex: 0.25;
+     /* flex: 0.25;*/
+     width: 69px;
     }
   }
 }

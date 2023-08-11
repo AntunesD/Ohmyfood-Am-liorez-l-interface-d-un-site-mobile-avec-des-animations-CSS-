@@ -1,138 +1,39 @@
 @charset "UTF-8";
-/***Importation***/
 /***Couleur***/
 /***Ombres***/
-/***Fonction j'aime***/
-.jaime {
-  display: none;
-}
-.jaime__coeur {
-  opacity: 1;
-  transition: opacity 400ms;
-}
-.jaime__coeur-rose {
-  opacity: 0;
-  background: linear-gradient(187deg, rgb(147, 86, 220) 10%, rgb(255, 121, 218) 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  transition: opacity 400ms;
-}
-.jaime:checked ~ .label .jaime__coeur {
-  opacity: 0;
-}
-.jaime:checked ~ .label .jaime__coeur-rose {
-  opacity: 1;
+/***Générale***/
+* {
+  font-family: "Roboto", sans-serif;
 }
 
-/***CTA***/
-.CTA {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: linear-gradient(355deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
-  color: white;
-  width: 218px;
-  height: 50px;
-  border-radius: 25px;
-  font-size: 16px;
-  border: none;
-  margin: 27px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-  position: relative;
-  z-index: 1;
-}
-.CTA:hover::after {
-  opacity: 0.15;
-}
-.CTA::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  border-radius: 25px;
-  background-color: #ffffff;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-  opacity: 0;
-  z-index: -1;
-  transition: opacity 300ms ease-out;
+a {
+  text-decoration: none;
+  color: black;
 }
 
-/******Page des menus******/
-.menu {
-  max-width: 100%;
-  width: 100%;
-  background-color: #F6F6F6;
-  padding: 1px 13px;
-  border-top-left-radius: 32px;
-  border-top-right-radius: 32px;
-  position: relative;
-  overflow: hidden;
+html {
+  scroll-behavior: smooth;
 }
-.menu__coeurs {
-  position: absolute;
-  top: 32px;
-  right: 35px;
-  font-size: 28px;
-}
-.menu h1 {
-  max-width: 80%;
-  font-size: 28px;
-  margin-top: 32px;
-  margin-left: 4px;
-  margin-bottom: -10px;
-  font-family: "Shrikhand", cursive;
-}
-.menu h2 {
-  font-size: 16px;
-  font-weight: 300;
-  margin-top: 40px;
-  margin-bottom: 18px;
-}
-.menu h2 span {
-  padding-bottom: 4px;
-  border-bottom: 2px solid #99E2D0;
-}
-.menu li {
-  display: flex;
-  height: 69px;
-  border-radius: 15px;
-  background-color: white;
-  margin-top: 12px;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-  padding: 14px 15px;
-  box-sizing: border-box;
-  position: relative;
-}
-.menu li h3 {
-  font-size: 1.125em;
+
+body {
   margin: 0;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.menu li h3 span {
-  font-weight: 100;
-  font-size: 0.94em;
-}
-.menu li b {
-  display: flex;
-  flex-wrap: wrap;
-  align-content: end;
-  margin-right: 16px;
-  margin-left: auto;
 }
 
-.cta__centrer {
+main {
+  background-color: #F6F6F6;
   display: flex;
-  justify-content: center;
-  position: relative;
-  height: 100%;
+  flex-direction: column;
+  align-items: center;
 }
-.cta__centrer .CTA {
-  margin-bottom: 40px;
+
+section {
+  padding: 17px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+ul {
+  padding: 0;
 }
 
 /***Header***/
@@ -196,6 +97,64 @@ footer a {
 }
 footer i {
   margin-right: 11px;
+}
+
+/***CTA***/
+.CTA {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(355deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
+  color: white;
+  width: 218px;
+  height: 50px;
+  border-radius: 25px;
+  font-size: 16px;
+  border: none;
+  margin: 27px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  position: relative;
+  z-index: 1;
+}
+.CTA:hover::after {
+  opacity: 0.15;
+}
+.CTA::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 25px;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 300ms ease-out;
+}
+
+/***Coeur j'aime***/
+.jaime {
+  display: none;
+}
+.jaime__coeur {
+  opacity: 1;
+  transition: opacity 400ms;
+}
+.jaime__coeur-rose {
+  opacity: 0;
+  background: linear-gradient(187deg, rgb(147, 86, 220) 10%, rgb(255, 121, 218) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  transition: opacity 400ms;
+}
+.jaime:checked ~ .label .jaime__coeur {
+  opacity: 0;
+}
+.jaime:checked ~ .label .jaime__coeur-rose {
+  opacity: 1;
 }
 
 /******Page d'accueil******/
@@ -324,118 +283,88 @@ form input::placeholder {
   right: 25px;
 }
 
-/***Générale***/
-* {
-  font-family: "Roboto", sans-serif;
-}
-
-a {
-  text-decoration: none;
-  color: black;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  margin: 0;
-}
-
-main {
-  background-color: #F6F6F6;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-section {
-  padding: 17px;
+/******Page des menus******/
+.menu {
+  max-width: 100%;
   width: 100%;
-  box-sizing: border-box;
+  background-color: #F6F6F6;
+  padding: 1px 13px;
+  border-top-left-radius: 32px;
+  border-top-right-radius: 32px;
+  position: relative;
+  overflow: hidden;
 }
-
-ul {
+.menu section {
   padding: 0;
 }
+.menu h1 {
+  max-width: 80%;
+  font-size: 28px;
+  margin-top: 32px;
+  margin-left: 4px;
+  margin-bottom: -10px;
+  font-family: "Shrikhand", cursive;
+}
+.menu__coeurs {
+  position: absolute;
+  top: 32px;
+  right: 35px;
+  font-size: 28px;
+}
+.menu h2 {
+  right: 0;
+  font-size: 16px;
+  font-weight: 300;
+  margin-top: 40px;
+  margin-bottom: 18px;
+  margin-right: auto;
+}
+.menu h2 span {
+  padding-bottom: 4px;
+  border-bottom: 2px solid #99E2D0;
+}
+.menu li {
+  display: flex;
+  height: 69px;
+  border-radius: 15px;
+  background-color: white;
+  margin-top: 12px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 14px 15px;
+  padding-bottom: 0;
+  box-sizing: border-box;
+  position: relative;
+}
+.menu li h3 {
+  font-size: 1.125em;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.menu li h3 span {
+  font-weight: 100;
+  font-size: 0.94em;
+}
+.menu li b {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: end;
+  margin-right: 16px;
+  margin-left: auto;
+  margin-bottom: 14px;
+}
 
-/***Media queries et animation***/
-/*** Media queries ***/
-@media (min-width: 768px) {
-  .header__logo {
-    height: 96px;
-    padding: 0;
-  }
-  h1 {
-    font-size: 40px;
-  }
-  .hero p {
-    font-size: 18px;
-  }
-  .hero .CTA {
-    margin-bottom: 0;
-  }
-  .etape ul {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .etape li {
-    width: 33%;
-  }
-  #cartesDesRestaurants {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-  .carte {
-    width: 45.37%;
-    margin-top: 28px;
-    margin-bottom: 22px;
-  }
-  footer {
-    height: 114px;
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: end;
-  }
-  footer ul {
-    display: flex;
-    flex-direction: row;
-    margin-bottom: 30px;
-  }
-  footer h2 {
-    margin-bottom: 26px;
-  }
-  footer a {
-    margin: 0 10px;
-  }
-  .menu {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-  }
-  .menu h1 {
-    text-align: center;
-  }
-  .menu ul {
-    width: 100%;
-    max-width: 634px;
-  }
-  .main-menus {
-    background-color: white;
-  }
+.cta__centrer {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  height: 100%;
 }
-@media (min-width: 1024px) {
-  .etape {
-    display: flex;
-    justify-content: center;
-  }
-  .restaurants, .etape--media, .menu {
-    width: 100%;
-    max-width: 1024px;
-  }
+.cta__centrer .CTA {
+  margin-bottom: 40px;
 }
+
 /******Animations******/
 /***Loader***/
 .acceuil {
@@ -445,18 +374,14 @@ ul {
 
 .loader {
   display: flex;
+  height: 0;
   justify-content: center;
-  width: 100%;
   -webkit-perspective: 700px;
   perspective: 700px;
   position: sticky;
   top: 50%;
   opacity: 1;
   animation: fadeOut 5s ease forwards;
-}
-
-.loader.hidden {
-  opacity: 0;
 }
 
 .loader > span {
@@ -574,8 +499,92 @@ ul {
 }
 
 .menu li:hover .check {
-  /* flex: 0.25;*/
   width: 69px;
 }
 
-/*# sourceMappingURL=style.css.map */
+/*** Media queries ***/
+@media (min-width: 768px) {
+  /*header footer*/
+  .header__logo {
+    height: 96px;
+    padding: 0;
+  }
+  footer {
+    height: 114px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: end;
+  }
+  footer ul {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 30px;
+  }
+  footer h2 {
+    margin-bottom: 26px;
+  }
+  footer a {
+    margin: 0 10px;
+  }
+  /*accuei*/
+  .acceuil h1 {
+    font-size: 40px;
+  }
+  .hero p {
+    font-size: 18px;
+  }
+  .hero .CTA {
+    margin-bottom: 0;
+  }
+  .etape ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .etape li {
+    width: 33%;
+  }
+  #cartesDesRestaurants {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .carte {
+    width: 45.37%;
+    margin-top: 28px;
+    margin-bottom: 22px;
+  }
+  /*Menu*/
+  .menu {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .menu h1 {
+    text-align: center;
+  }
+  .menu ul {
+    width: 100%;
+  }
+  .menu section {
+    width: 100%;
+    max-width: 634px;
+  }
+  .main-menus {
+    background-color: white;
+  }
+}
+@media (min-width: 1024px) {
+  .etape {
+    display: flex;
+    justify-content: center;
+  }
+  .restaurants,
+  .etape--media,
+  .menu {
+    width: 100%;
+    max-width: 1024px;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

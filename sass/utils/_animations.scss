@@ -10,20 +10,14 @@
 
 .loader {
   display: flex;
+  height: 0;
   justify-content: center;
-  width: 100%;
   -webkit-perspective: 700px;
   perspective: 700px;
   position: sticky;
   top: 50%;
   opacity: 1;
   animation: fadeOut 5s ease forwards;
-}
-
-
-
-.loader.hidden {
-  opacity: 0;
 }
 
 .loader>span {
@@ -169,7 +163,6 @@
 .menu {
   & li:hover {
     & .check {
-     /* flex: 0.25;*/
      width: 69px;
     }
   }

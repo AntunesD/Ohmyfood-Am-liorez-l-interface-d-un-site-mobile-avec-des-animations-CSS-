@@ -1,11 +1,3 @@
-/***Importation***/
-
-@import "./partials/variables";
-@import "./partials/menu";
-@import "./partials/header-footer";
-@import "./partials/accueil";
-
-
 /***Générale***/
 
 * {
@@ -42,9 +34,3 @@ section {
 ul {
     padding: 0;
 }
-
-/***Media queries et animation***/
-
-@import "./partials/mediaqueries";
-
-@import "./partials/animations";

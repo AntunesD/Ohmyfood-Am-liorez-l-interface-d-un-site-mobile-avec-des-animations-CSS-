@@ -1,0 +1,69 @@
+/***CTA***/
+
+
+.CTA {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $Button-gradient;
+    color: white;
+    width: 218px;
+    height: 50px;
+    border-radius: 25px;
+    font-size: 16px;
+    border: none;
+    margin: 27px;
+    box-shadow: $Button-shadow;
+    position: relative;
+    z-index: 1;
+
+    &:hover {
+        &::after {
+            opacity: 0.15;
+        }
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        border-radius: 25px;
+        background-color: #ffffff;
+        box-shadow: $Button-shadow;
+        opacity: 0;
+        z-index: -1;
+        transition: opacity 300ms ease-out;
+    }
+}
+
+/***Coeur j'aime***/
+
+.jaime {
+    display: none;
+
+    &__coeur {
+        opacity: 1;
+        transition: opacity 400ms;
+    }
+
+    &__coeur-rose {
+        opacity: 0;
+        background: $Like-gradient;
+        ;
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        transition: opacity 400ms;
+    }
+
+    &:checked~.label .jaime__coeur {
+        opacity: 0;
+    }
+
+    &:checked~.label .jaime__coeur-rose {
+        opacity: 1;
+    }
+}

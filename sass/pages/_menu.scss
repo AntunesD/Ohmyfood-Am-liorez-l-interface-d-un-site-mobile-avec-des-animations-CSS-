@@ -10,13 +10,10 @@
     position: relative;
     overflow: hidden;
 
-    &__coeurs {
-        position: absolute;
-        top: 32px;
-        right: 35px;
-        font-size: 28px;
+    & section {
+        padding: 0;
     }
-
+ 
     & h1 {
         max-width: 80%;
         font-size: 28px;
@@ -26,11 +23,20 @@
         font-family: 'Shrikhand', cursive;
     }
 
+    &__coeurs {
+        position: absolute;
+        top: 32px;
+        right: 35px;
+        font-size: 28px;
+    }
+
     & h2 {
+        right: 0;
         font-size: 16px;
         font-weight: 300;
         margin-top: 40px;
         margin-bottom: 18px;
+        margin-right: auto;
 
         & span {
             padding-bottom: 4px;
@@ -47,6 +53,7 @@
         margin-top: 12px;
         box-shadow: $Card-shadow;
         padding: 14px 15px;
+        padding-bottom: 0;
         box-sizing: border-box;
         position: relative;
 
@@ -69,6 +76,7 @@
             align-content: end;
            margin-right: 16px;
             margin-left: auto;
+            margin-bottom: 14px;
         }
     }
 }
